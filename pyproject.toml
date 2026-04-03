@@ -1,0 +1,9 @@
+[project]
+name = "sdu-os-ppts"
+version = "0.1.0"
+description = "Get sdu os ppts."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32.5",
+]

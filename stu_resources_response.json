@@ -1,0 +1,82 @@
+{
+  "code": 200,
+  "message": "OK",
+  "data": {
+    "list": [
+      {
+        "aiResourcesId": 201985,
+        "resourcesType": 1,
+        "createTime": "2026-03-30 20:17:16",
+        "resourcesName": "第4.2讲 时间的协调-线程实现 - 发放.pptx",
+        "resourcesFileId": "1420910267",
+        "resourcesSize": "1787540",
+        "resourcesSuffix": "pptx",
+        "resourcesUrl": "https://file.zhihuishu.com/zhs/kg-smart-course-operating-pro/courseSpace/202603/b6a45381f76840e693ac469c538e426c.pptx",
+        "resourcesCover": null,
+        "source": 1,
+        "ownerName": "潘润宇",
+        "ownerAvatar": "https://image.zhihuishu.com/zhs/ablecommons/demo/201804/586a2783a3054bd9a751dbbe5979b530.jpg",
+        "isOwner": null,
+        "generatedCover": 0,
+        "transStatus": 1,
+        "classList": null
+      },
+      {
+        "aiResourcesId": 188947,
+        "resourcesType": 1,
+        "createTime": "2026-03-16 19:09:30",
+        "resourcesName": "第3.1讲 程序的结构-简单的程序 - 发放.pptx",
+        "resourcesFileId": "1411426247",
+        "resourcesSize": "2234403",
+        "resourcesSuffix": "pptx",
+        "resourcesUrl": "https://file.zhihuishu.com/zhs/kg-smart-course-operating-pro/courseSpace/202603/910759da53ec4b1996ba7e74f63a53e9.pptx",
+        "resourcesCover": null,
+        "source": 1,
+        "ownerName": "潘润宇",
+        "ownerAvatar": "https://image.zhihuishu.com/zhs/ablecommons/demo/201804/586a2783a3054bd9a751dbbe5979b530.jpg",
+        "isOwner": null,
+        "generatedCover": 0,
+        "transStatus": 1,
+        "classList": null
+      },
+      {
+        "aiResourcesId": 185010,
+        "resourcesType": 1,
+        "createTime": "2026-03-12 18:16:18",
+        "resourcesName": "第2讲 操作系统准备知识 - 发放.pptx",
+        "resourcesFileId": "1409599279",
+        "resourcesSize": "21185681",
+        "resourcesSuffix": "pptx",
+        "resourcesUrl": "https://file.zhihuishu.com/zhs/kg-smart-course-operating-pro/courseSpace/202603/bff07ac2ea134f4295b949dcc75449f5.pptx",
+        "resourcesCover": null,
+        "source": 1,
+        "ownerName": "潘润宇",
+        "ownerAvatar": "https://image.zhihuishu.com/zhs/ablecommons/demo/201804/586a2783a3054bd9a751dbbe5979b530.jpg",
+        "isOwner": null,
+        "generatedCover": 0,
+        "transStatus": 1,
+        "classList": null
+      },
+      {
+        "aiResourcesId": 171412,
+        "resourcesType": 1,
+        "createTime": "2026-03-04 16:20:56",
+        "resourcesName": "第1讲 操作系统概述 - 发放.pptx",
+        "resourcesFileId": "1405936153",
+        "resourcesSize": "32395598",
+        "resourcesSuffix": "pptx",
+        "resourcesUrl": "https://file.zhihuishu.com/zhs/kg-smart-course-operating-pro/courseSpace/202603/e621ec0da25a4695b94aa91dca154dcb.pptx",
+        "resourcesCover": null,
+        "source": 1,
+        "ownerName": "潘润宇",
+        "ownerAvatar": "https://image.zhihuishu.com/zhs/ablecommons/demo/201804/586a2783a3054bd9a751dbbe5979b530.jpg",
+        "isOwner": null,
+        "generatedCover": 0,
+        "transStatus": 1,
+        "classList": null
+      }
+    ],
+    "total": 4
+  },
+  "traceId": "5cbaa22566eda3776e756349a4ba63fa"
+}

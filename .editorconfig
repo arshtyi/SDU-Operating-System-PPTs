@@ -1,0 +1,41 @@
+root = true
+
+# Default: Linux-friendly and language-agnostic
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Documentation
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off
+
+# Data / config formats (commonly 2 spaces)
+[*.{json,jsonc,json5,yml,yaml,toml,xml}]
+indent_size = 2
+
+[*.{code-workspace,webmanifest}]
+indent_size = 2
+
+# Shell / script files
+[*.{sh,bash,zsh,fish,nu}]
+indent_size = 4
+
+# Common source files (keep explicit 4-space policy)
+[*.{c,cc,cpp,cxx,h,hh,hpp,hxx,cs,java,kt,kts,scala,go,rs,swift,dart,py,rb,php,pl,lua,js,mjs,cjs,jsx,ts,tsx}]
+indent_size = 4
+
+# Build files that require tabs
+[Makefile]
+indent_style = tab
+
+[*.mk]
+indent_style = tab
+
+# Windows-native scripts and project files
+[*.{bat,cmd,ps1,psm1,psd1,sln,vcxproj,props,targets}]
+end_of_line = crlf
