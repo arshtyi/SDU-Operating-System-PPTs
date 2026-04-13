@@ -141,7 +141,7 @@ wheels = [
 ]
 
 [[package]]
-name = "test"
+name = "sdu-os-ppts"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

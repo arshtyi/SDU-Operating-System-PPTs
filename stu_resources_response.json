@@ -4,6 +4,42 @@
   "data": {
     "list": [
       {
+        "aiResourcesId": 210858,
+        "resourcesType": 1,
+        "createTime": "2026-04-13 18:15:01",
+        "resourcesName": "第5.2讲 空间的协调-进程实现 - 发放.pptx",
+        "resourcesFileId": "1430127905",
+        "resourcesSize": "2856315",
+        "resourcesSuffix": "pptx",
+        "resourcesUrl": "https://file.zhihuishu.com/zhs/kg-smart-course-operating-pro/courseSpace/202604/18d7c8bc36044c42b0b037d207b3cf7b.pptx",
+        "resourcesCover": null,
+        "source": 1,
+        "ownerName": "潘润宇",
+        "ownerAvatar": "https://image.zhihuishu.com/zhs/ablecommons/demo/201804/586a2783a3054bd9a751dbbe5979b530.jpg",
+        "isOwner": null,
+        "generatedCover": 0,
+        "transStatus": 1,
+        "classList": null
+      },
+      {
+        "aiResourcesId": 208670,
+        "resourcesType": 1,
+        "createTime": "2026-04-09 20:13:32",
+        "resourcesName": "第5.1讲 空间的协调-主存储器 - 发放.pptx",
+        "resourcesFileId": "1427507555",
+        "resourcesSize": "5093298",
+        "resourcesSuffix": "pptx",
+        "resourcesUrl": "https://file.zhihuishu.com/zhs/kg-smart-course-operating-pro/courseSpace/202604/a323661a3bc2479c876230af2c6fbe5b.pptx",
+        "resourcesCover": null,
+        "source": 1,
+        "ownerName": "潘润宇",
+        "ownerAvatar": "https://image.zhihuishu.com/zhs/ablecommons/demo/201804/586a2783a3054bd9a751dbbe5979b530.jpg",
+        "isOwner": null,
+        "generatedCover": 0,
+        "transStatus": 1,
+        "classList": null
+      },
+      {
         "aiResourcesId": 201985,
         "resourcesType": 1,
         "createTime": "2026-03-30 20:17:16",
@@ -76,7 +112,7 @@
         "classList": null
       }
     ],
-    "total": 4
+    "total": 6
   },
-  "traceId": "5cbaa22566eda3776e756349a4ba63fa"
+  "traceId": "1f24c2fbb4c822f2137b72a2fa7da5aa"
 }

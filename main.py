@@ -1,8 +1,8 @@
 import json
+import os
 from pathlib import Path
 import re
 from urllib.parse import urlparse
-
 import requests
 from urllib3 import disable_warnings
 from urllib3.exceptions import InsecureRequestWarning
@@ -14,13 +14,28 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 "
     "Chrome/110.0.5481.154 Mobile Safari/537.36; zhihuishu"
 )
-AUTHORIZATION = (
-    "eyJraWQiOiJFRjRGMjJDMC01Q0IwLTQzNDgtOTY3Qi0wMjY0OTVFN0VGQzgiLCJhbGciOiJFUzI1NiJ9."
-    "eyJpc3MiOiJjb20uemhpaHVpc2h1IiwiYXVkIjoiWkRfQSIsInN1YiI6IuW9remdlui9qSIsImlhdCI6"
-    "MTc3NTE5NjY5NywiZXhwIjoxNzc1MjA3NDk3LCJqdGkiOiIzZTExZDc1NC0zNTdjLTRmOGYtOTVkNC03"
-    "MTczYzA4YWRlNzgiLCJ1aWQiOjg2NDU3NTE5OX0.brLxdFZeCIK4KL-caf0APEz5sK_5Iq4sOyre5ZFpp"
-    "MrCgMGxDMlV6MhKw7qThhGE7Ib50CV3XUkEeBlgf2eavg"
-)
+
+
+def read_authorization_from_env() -> str:
+    token = os.getenv("AUTHORIZATION", "").strip()
+    if token:
+        return token
+
+    env_file = Path(".env")
+    if env_file.exists():
+        for raw_line in env_file.read_text(encoding="utf-8").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            if key.strip() != "AUTHORIZATION":
+                continue
+            return value.strip().strip('"').strip("'")
+
+    raise ValueError("AUTHORIZATION not found in environment or .env file")
+
+
+AUTHORIZATION = read_authorization_from_env()
 
 HEADERS = {
     "Authorization": AUTHORIZATION,
@@ -40,19 +55,6 @@ DOWNLOAD_DIR = Path("text")
 def safe_filename(name: str) -> str:
     cleaned = re.sub(r'[\\/:*?"<>|]+', "_", name).strip()
     return cleaned or "unnamed"
-
-
-def unique_path(path: Path) -> Path:
-    if not path.exists():
-        return path
-    stem = path.stem
-    suffix = path.suffix
-    i = 1
-    while True:
-        candidate = path.with_name(f"{stem}_{i}{suffix}")
-        if not candidate.exists():
-            return candidate
-        i += 1
 
 
 def guess_filename(item: dict) -> str:
@@ -93,7 +95,9 @@ def main() -> None:
     )
     response.raise_for_status()
     data = response.json()
-    OUT_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT_FILE.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     print(f"saved: {OUT_FILE}")
 
     DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -105,7 +109,7 @@ def main() -> None:
         if not url:
             continue
         filename = guess_filename(item)
-        target = unique_path(DOWNLOAD_DIR / filename)
+        target = DOWNLOAD_DIR / filename
         download_file(url, target)
         print(f"[{idx}/{len(items)}] downloaded: {target}")
 
