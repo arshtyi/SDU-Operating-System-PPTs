@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+text/
+.env
+download_summary.md
